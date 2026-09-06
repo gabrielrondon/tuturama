@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "tuturama-site", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev", "--", "-p", "3377"], "port": 3377 }
+  ]
+}

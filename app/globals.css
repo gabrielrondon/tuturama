@@ -1,26 +1,141 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Tuturama design tokens.
+  Adapted from the GSAP style reference (styles.refero.design/style/00537a20).
+  Dark canvas, one cream surface colour, colour as taxonomy, ghost pill buttons,
+  "{ }" annotations opening each section, hairline dividers.
+*/
+@theme {
+  --color-canvas: #0e100f;
+  --color-surface: #191919;
+  --color-hairline: #42433d;
+  --color-cream: #fffce1;
+  --color-cream-dim: rgba(255, 252, 225, 0.62);
+  --color-green: #abff84;
+  --color-orange: #ff8709;
+  --color-blue: #00bae2;
+  --color-lilac: #9d95ff;
+  --color-pink: #fec5fb;
+
+  --radius-pill: 100px;
+
+  --font-display: var(--font-display-face), "Inter Tight", "Inter", system-ui, sans-serif;
+  --font-body: var(--font-display-face), "Inter Tight", "Inter", system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/*
+  Display face.
+  Today: Inter Tight (Google Fonts, loaded in app/layout.tsx via next/font).
+  When PP Mori is licensed (pangrampangram.com/products/mori), drop the woff2 files in
+  /public/fonts and uncomment the block below. --font-display-face is then set in layout.tsx.
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @font-face {
+    font-family: "PP Mori";
+    src: url("/fonts/PPMori-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
   }
+  @font-face {
+    font-family: "PP Mori";
+    src: url("/fonts/PPMori-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+  }
+*/
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: var(--color-canvas);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-green);
+  color: var(--color-canvas);
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+@layer components {
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.hero-title {
+  font-size: clamp(52px, 11.5vw, 196px);
+}
+
+.h2 {
+  font-size: clamp(36px, 6vw, 88px);
+}
+
+.h3 {
+  font-size: clamp(26px, 3.2vw, 44px);
+}
+
+.annotation {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 1px solid var(--color-cream);
+  border-radius: var(--radius-pill);
+  padding: 0.65em 1.25em;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1;
+  color: var(--color-cream);
+  text-decoration: none;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.pill:hover {
+  background: var(--color-cream);
+  color: var(--color-canvas);
+}
+
+.pill-primary {
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(var(--color-canvas), var(--color-canvas)) padding-box,
+    linear-gradient(90deg, var(--color-green), #dfffd1) border-box;
+}
+
+.pill-primary:hover {
+  background: var(--color-green);
+  color: var(--color-canvas);
+}
+
+.hairline {
+  border-top: 1px solid var(--color-hairline);
+}
+
+.prose-block p + p {
+  margin-top: 1em;
+}
 }
