@@ -156,9 +156,9 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
         <div className="text-[15px] text-cream-dim">
           <div className="mb-3">
-            <p className="flex items-center gap-2">
-              <FlagEE className="h-[18px] w-[25px]" />
-              <FlagEU className="h-[18px] w-[25px]" />
+            <p className="flex items-center gap-3">
+              <FlagEE className="h-[26px] w-[36px]" />
+              <FlagEU className="h-[26px] w-[36px]" />
             </p>
             <p className="mt-2">{t.footer.estonian}</p>
           </div>
