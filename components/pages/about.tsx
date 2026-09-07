@@ -29,6 +29,9 @@ export function AboutPage({ lang }: { lang: Lang }) {
             <p className="mt-2 text-cream">{t.lisbon}</p>
             <p className="mt-6 text-[14px] uppercase tracking-wide">{t.elsewhere}</p>
             <p className="mt-2 flex flex-col gap-1">
+              <a href="https://github.com/tuturama" className="text-cream">
+                github.com/tuturama
+              </a>
               <a href="https://github.com/gabrielrondon" className="text-cream">
                 github.com/gabrielrondon
               </a>

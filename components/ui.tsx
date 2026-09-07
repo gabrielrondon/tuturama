@@ -139,7 +139,7 @@ export function Footer({ lang }: { lang: Lang }) {
           <Link href={href(lang, "/archive")} className="text-cream-dim no-underline hover:text-cream">
             {t.nav.archive}
           </Link>
-          <a href="https://github.com/gabrielrondon" className="text-cream-dim no-underline hover:text-cream">
+          <a href="https://github.com/tuturama" className="text-cream-dim no-underline hover:text-cream">
             {t.nav.github}
           </a>
           <a href="https://gabrielrondon.com" className="text-cream-dim no-underline hover:text-cream">
