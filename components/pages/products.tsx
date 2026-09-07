@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Annotation, Nav } from "@/components/ui";
+import { Reveal } from "@/components/reveal";
 import { ProductVisual } from "@/components/product-visual";
 import { ProductsArt } from "@/components/illustrations";
 import { statusLabel } from "@/data/site.et";
@@ -16,7 +17,7 @@ export function ProductsPage({ lang }: { lang: Lang }) {
         <Annotation label={lines.products.label} hue={lines.products.hue} />
         <div className="mt-5 grid items-end gap-6 md:grid-cols-[2fr_1fr]">
           <h1 className="display h2 max-w-[14ch]">{t.h1}</h1>
-          <ProductsArt className="hidden w-[280px] justify-self-end text-orange md:block" />
+          <Reveal className="justify-self-end"><ProductsArt className="hidden w-[280px] justify-self-end text-orange md:block" /></Reveal>
         </div>
         <p className="mt-8 max-w-[56ch] text-[19px] leading-[1.25]">{t.lead}</p>
 

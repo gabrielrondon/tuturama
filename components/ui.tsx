@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { hueClass, type Hue, company } from "@/data/site";
 import { href, other, ui, type Lang } from "@/lib/i18n";
 import { FlagEE, FlagEU, FlagGB } from "@/components/flags";
+import { Reveal } from "@/components/reveal";
 
 export function Annotation({ label, hue }: { label: string; hue: Hue }) {
   return (
@@ -32,14 +33,18 @@ export function Section({
   return (
     <section id={id} className="hairline py-14 md:py-20">
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-        <Annotation label={label} hue={hue} />
-        {title ? (
-          <div className="mt-5 grid items-end gap-6 md:grid-cols-[2fr_1fr]">
-            <h2 className="display h2 max-w-[16ch]">{title}</h2>
-            {art ? <div className={`${hueClass[hue]} hidden justify-self-end md:block`}>{art}</div> : null}
-          </div>
-        ) : null}
-        <div className="mt-8 md:mt-12">{children}</div>
+        <Reveal>
+          <Annotation label={label} hue={hue} />
+          {title ? (
+            <div className="mt-5 grid items-end gap-6 md:grid-cols-[2fr_1fr]">
+              <h2 className="display h2 max-w-[16ch]">{title}</h2>
+              {art ? <div className={`${hueClass[hue]} hidden justify-self-end md:block`}>{art}</div> : null}
+            </div>
+          ) : null}
+        </Reveal>
+        <Reveal className="mt-8 md:mt-12" delay={120}>
+          {children}
+        </Reveal>
       </div>
     </section>
   );

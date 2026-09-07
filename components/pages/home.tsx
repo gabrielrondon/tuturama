@@ -16,7 +16,7 @@ export function HomePage({ lang }: { lang: Lang }) {
       <section className="relative overflow-hidden px-5 pb-16 pt-10 md:px-10 md:pb-24 md:pt-20">
         <div className="flourish flourish-emerald right-[-10%] top-[-10%] h-[520px] w-[520px] md:right-[4%] md:top-[-6%] md:h-[720px] md:w-[720px]" />
         <div className="flourish flourish-crush right-[10%] top-[40%] h-[320px] w-[320px] opacity-30 md:right-[18%] md:top-[46%] md:h-[420px] md:w-[420px]" />
-        <div className="relative">
+        <div className="relative hero-in">
           <div className="mx-auto max-w-[1400px]">
             <Annotation label={t.annotation} hue="green" />
           </div>

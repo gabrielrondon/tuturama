@@ -162,3 +162,80 @@ a {
   background: var(--color-surface);
   overflow: hidden;
 }
+
+/* ---------- Motion ----------
+   Four layers, all CSS: hero entrance, drifting flourishes, self-drawing illustrations with a
+   short loop, and section reveals. Everything stops under prefers-reduced-motion. */
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes drift-a {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-6%, 8%) scale(1.08); }
+  100% { transform: translate(4%, -5%) scale(0.96); }
+}
+@keyframes drift-b {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(8%, -10%) scale(1.12); }
+  100% { transform: translate(-5%, 6%) scale(0.94); }
+}
+@keyframes draw-in {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes march {
+  to { stroke-dashoffset: -2; }
+}
+@keyframes ride {
+  0% { offset-distance: 0%; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+@keyframes scan {
+  0% { transform: translateX(0); opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% { transform: translateX(240px); opacity: 0; }
+}
+@keyframes pulse {
+  0%, 100% { fill-opacity: 0.18; }
+  50% { fill-opacity: 0.55; }
+}
+@keyframes blink {
+  0%, 84%, 100% { transform: scaleY(1); }
+  90% { transform: scaleY(0.15); }
+}
+
+/* Hero entrance */
+.hero-in > * { animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.hero-in > *:nth-child(1) { animation-delay: 0ms; }
+.hero-in > *:nth-child(2) { animation-delay: 120ms; }
+.hero-in > *:nth-child(3) { animation-delay: 300ms; }
+
+/* Flourishes drift, slowly, forever. */
+.flourish-emerald { animation: drift-a 22s ease-in-out infinite alternate; }
+.flourish-crush { animation: drift-b 26s ease-in-out infinite alternate; }
+
+/* Section reveal */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--d, 0ms); }
+.reveal.is-in { opacity: 1; transform: none; }
+
+/* Illustrations: strokes hidden until the section is in, then drawn in order (--i), then loops. */
+.art .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.art .rider, .art .packet, .art .scan { opacity: 0; }
+.is-in .art .draw { animation: draw-in 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards; animation-delay: calc(var(--i, 0) * 110ms); }
+.is-in .art .wave { animation: draw-in 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards, march 2.4s linear 1.2s infinite; }
+.is-in .art .rider { animation: ride 3.2s ease-in-out 1.6s infinite; }
+.is-in .art .packet { animation: ride 2.6s ease-in-out 1.6s infinite; }
+.is-in .art .scan { animation: scan 4s ease-in-out 1.4s infinite; }
+.is-in .art .seat, .is-in .art .gate, .is-in .art .land { animation: draw-in 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards, pulse 2.8s ease-in-out 1.6s infinite; animation-delay: calc(var(--i, 0) * 110ms), 1.6s; }
+.art .blink { transform-origin: center; transform-box: fill-box; animation: blink 4.5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-in > *, .flourish-emerald, .flourish-crush, .art .draw, .art .wave, .art .rider, .art .packet, .art .scan, .art .seat, .art .gate, .art .land, .art .blink { animation: none !important; }
+  .art .draw { stroke-dashoffset: 0; }
+  .art .rider, .art .packet, .art .scan { opacity: 0; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

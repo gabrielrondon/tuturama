@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Annotation, Nav } from "@/components/ui";
+import { Reveal } from "@/components/reveal";
 import { AgentsArt } from "@/components/illustrations";
 import { getContent, href, ui, type Lang } from "@/lib/i18n";
 
@@ -13,7 +14,7 @@ export function AgentsPage({ lang }: { lang: Lang }) {
         <Annotation label={lines.now.label} hue={lines.now.hue} />
         <div className="mt-5 grid items-end gap-6 md:grid-cols-[2fr_1fr]">
           <h1 className="display h2 max-w-[14ch]">{t.h1}</h1>
-          <AgentsArt className="hidden w-[280px] justify-self-end text-green md:block" />
+          <Reveal className="justify-self-end"><AgentsArt className="hidden w-[280px] justify-self-end text-green md:block" /></Reveal>
         </div>
         <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-16">
           <p className="prose-block max-w-[52ch] text-[19px] leading-[1.25]">
