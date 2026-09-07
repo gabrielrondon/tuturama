@@ -14,7 +14,8 @@ export function Threads({ lang }: { lang: Lang }) {
     <div className="flex flex-col gap-14 md:gap-20">
       {list.map((t) => {
         const n = t.items.length;
-        const xs = t.items.map((_, i) => 40 + (i * 920) / (n - 1));
+        // One dot per grid column, sitting on the column's left edge (where the text starts).
+        const xs = t.items.map((_, i) => `${(i / n) * 100 + 0.5}%`);
         return (
           <Reveal key={t.key} className={`thread ${hueClass[t.hue]}`}>
             <div className="flex flex-wrap items-baseline gap-x-6 gap-y-1">
@@ -24,8 +25,8 @@ export function Threads({ lang }: { lang: Lang }) {
 
             {/* Desktop: the line */}
             <div className="mt-6 hidden md:block">
-              <svg viewBox="0 0 1000 40" className="art h-[40px] w-full" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-                <path className="draw" pathLength={1} d={`M${xs[0]} 20H${xs[n - 1]}`} style={{ "--i": 0 } as React.CSSProperties} />
+              <svg className="art h-[40px] w-full" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                <line className="draw" pathLength={1} x1={xs[0]} y1="20" x2={xs[n - 1]} y2="20" style={{ "--i": 0 } as React.CSSProperties} />
                 {xs.map((x, i) => (
                   <g key={i} className="dot" style={{ "--i": i } as React.CSSProperties}>
                     <circle cx={x} cy="20" r="7" fill="#0e100f" />
