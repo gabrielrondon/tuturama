@@ -3,8 +3,10 @@
 import { useEffect, useRef, type ReactNode } from "react";
 
 /*
-  Adds `is-in` to the element once it enters the viewport. CSS does the rest.
-  One observer per element, disconnects after the first hit. No animation library.
+  Progressive enhancement. The server HTML is fully visible. On mount, elements already in
+  the viewport get `is-in` at once (their illustrations draw themselves); elements below the
+  fold get `reveal-wait` (hidden) and `is-in` when they scroll into view. Without JavaScript
+  nothing is ever hidden.
 */
 export function Reveal({
   children,
@@ -21,10 +23,13 @@ export function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (typeof IntersectionObserver === "undefined") {
+    const reduce = typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const inView = el.getBoundingClientRect().top < window.innerHeight * 0.9;
+    if (reduce || inView || typeof IntersectionObserver === "undefined") {
       el.classList.add("is-in");
       return;
     }
+    el.classList.add("reveal-wait");
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
@@ -34,7 +39,7 @@ export function Reveal({
           }
         }
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.15 },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.12 },
     );
     io.observe(el);
     return () => io.disconnect();
