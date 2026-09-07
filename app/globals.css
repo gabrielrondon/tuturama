@@ -139,3 +139,26 @@ a {
   margin-top: 1em;
 }
 }
+
+/* Expressive gradient flourishes (GSAP: Emerald City, Skyfall, Orange Crush, Summer Fair). */
+.flourish {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+}
+.flourish-emerald {
+  background: radial-gradient(closest-side, #abff84 0%, #00bae2 55%, transparent 100%);
+}
+.flourish-crush {
+  background: radial-gradient(closest-side, #ff8709 0%, #f100cb 60%, transparent 100%);
+}
+.flourish-haze {
+  background: radial-gradient(closest-side, #9d95ff 0%, #fec5fb 60%, transparent 100%);
+}
+.frame {
+  border: 1px solid var(--color-hairline);
+  background: var(--color-surface);
+  overflow: hidden;
+}

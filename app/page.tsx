@@ -1,30 +1,39 @@
 import Link from "next/link";
 import { Annotation, Section } from "@/components/ui";
+import { EmbeddedArt, ProductsArt, UpstreamArt, AgentsArt } from "@/components/illustrations";
+import { ProductVisual } from "@/components/product-visual";
 import { products, merged, lines } from "@/data/site";
+
+const artClass = "w-[220px] lg:w-[280px]";
 
 export default function Home() {
   return (
     <>
-      <section className="px-5 pb-16 pt-10 md:px-10 md:pb-24 md:pt-20">
-        <div className="mx-auto max-w-[1400px]">
-          <Annotation label="software factory" hue="green" />
-        </div>
-        <h1 className="display hero-title mt-6 max-w-[12.5ch] pr-0">
-          Software factory for systems that cannot break.
-        </h1>
-        <div className="mx-auto mt-10 grid max-w-[1400px] gap-8 md:grid-cols-2 md:gap-16">
-          <p className="max-w-[46ch] text-[19px] leading-[1.2] text-cream">
-            Tuturama is an AI-native software factory. We build products, embed with security teams
-            inside large institutions, and contribute to the code the world runs on. Tallinn and
-            Lisbon.
-          </p>
-          <div className="flex flex-wrap items-start gap-3 md:justify-end">
-            <Link href="/contact" className="pill pill-primary">
-              work with us
-            </Link>
-            <Link href="/upstream" className="pill">
-              see what shipped
-            </Link>
+      <section className="relative overflow-hidden px-5 pb-16 pt-10 md:px-10 md:pb-24 md:pt-20">
+        {/* Gradient flourish, the one place the canvas gets colour washes. */}
+        <div className="flourish flourish-emerald right-[-10%] top-[-10%] h-[520px] w-[520px] md:right-[4%] md:top-[-6%] md:h-[720px] md:w-[720px]" />
+        <div className="flourish flourish-crush right-[10%] top-[40%] h-[320px] w-[320px] opacity-30 md:right-[18%] md:top-[46%] md:h-[420px] md:w-[420px]" />
+        <div className="relative">
+          <div className="mx-auto max-w-[1400px]">
+            <Annotation label="software factory" hue="green" />
+          </div>
+          <h1 className="display hero-title mt-6 max-w-[12.5ch] pr-0">
+            Software factory for systems that cannot break.
+          </h1>
+          <div className="mx-auto mt-10 grid max-w-[1400px] gap-8 md:grid-cols-2 md:gap-16">
+            <p className="max-w-[46ch] text-[19px] leading-[1.2] text-cream">
+              Tuturama is an AI-native software factory. We build products, embed with security
+              teams inside large institutions, and contribute to the code the world runs on.
+              Tallinn and Lisbon.
+            </p>
+            <div className="flex flex-wrap items-start gap-3 md:justify-end">
+              <Link href="/contact" className="pill pill-primary">
+                work with us
+              </Link>
+              <Link href="/upstream" className="pill">
+                see what shipped
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -34,6 +43,7 @@ export default function Home() {
         hue={lines.embedded.hue}
         id="embedded"
         title="Security and AI, inside the institution."
+        art={<EmbeddedArt className={artClass} />}
       >
         <div className="grid gap-8 md:grid-cols-2 md:gap-16">
           <p className="prose-block max-w-[52ch] text-[19px] leading-[1.25]">
@@ -62,10 +72,12 @@ export default function Home() {
         hue={lines.products.hue}
         id="products"
         title="Apps with a cognitive layer."
+        art={<ProductsArt className={artClass} />}
       >
         <div className="grid gap-px bg-hairline md:grid-cols-3">
           {products.map((p) => (
             <article key={p.name} className="bg-canvas p-6 md:p-8">
+              <ProductVisual name={p.name} className="mb-6" />
               <div className="flex items-baseline justify-between gap-4">
                 <h3 className="display h3">{p.name}</h3>
                 <span className="text-[14px] uppercase tracking-wide text-orange">{p.status}</span>
@@ -95,6 +107,7 @@ export default function Home() {
         hue={lines.upstream.hue}
         id="upstream"
         title="Open source, merged."
+        art={<UpstreamArt className={artClass} />}
       >
         <ul className="grid gap-x-16 gap-y-6 md:grid-cols-2">
           {merged.map((m) => (
@@ -114,7 +127,13 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section label={lines.now.label} hue={lines.now.hue} id="now" title="Security for AI agents.">
+      <Section
+        label={lines.now.label}
+        hue={lines.now.hue}
+        id="now"
+        title="Security for AI agents."
+        art={<AgentsArt className={artClass} />}
+      >
         <div className="grid gap-8 md:grid-cols-2 md:gap-16">
           <p className="max-w-[50ch] text-[19px] leading-[1.25]">
             Agents now browse, pay and read private data on our behalf. The security around them

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Annotation } from "@/components/ui";
+import { AgentsArt } from "@/components/illustrations";
 import { agentsWork, lines } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -13,7 +14,10 @@ export default function AgentsPage() {
   return (
     <div className="mx-auto max-w-[1400px] px-5 pb-20 pt-6 md:px-10 md:pt-12">
       <Annotation label={lines.now.label} hue={lines.now.hue} />
-      <h1 className="display h2 mt-5 max-w-[14ch]">Security for AI agents.</h1>
+      <div className="mt-5 grid items-end gap-6 md:grid-cols-[2fr_1fr]">
+        <h1 className="display h2 max-w-[14ch]">Security for AI agents.</h1>
+        <AgentsArt className="hidden w-[280px] justify-self-end text-green md:block" />
+      </div>
       <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-16">
         <p className="prose-block max-w-[52ch] text-[19px] leading-[1.25]">
           <span>

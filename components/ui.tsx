@@ -16,12 +16,14 @@ export function Section({
   label,
   hue,
   title,
+  art,
   children,
   id,
 }: {
   label: string;
   hue: Hue;
   title?: ReactNode;
+  art?: ReactNode;
   children: ReactNode;
   id?: string;
 }) {
@@ -29,7 +31,12 @@ export function Section({
     <section id={id} className="hairline py-14 md:py-20">
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
         <Annotation label={label} hue={hue} />
-        {title ? <h2 className="display h2 mt-5 max-w-[16ch]">{title}</h2> : null}
+        {title ? (
+          <div className="mt-5 grid items-end gap-6 md:grid-cols-[2fr_1fr]">
+            <h2 className="display h2 max-w-[16ch]">{title}</h2>
+            {art ? <div className={`${hueClass[hue]} hidden justify-self-end md:block`}>{art}</div> : null}
+          </div>
+        ) : null}
         <div className="mt-8 md:mt-12">{children}</div>
       </div>
     </section>
