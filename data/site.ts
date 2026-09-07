@@ -38,7 +38,7 @@ export const products: {
     status: "live",
     one: "Radio from the whole planet, in your menu bar and in your pocket.",
     body:
-      "A world radio player with a map, favourites that survive catalogue changes, and a curated station catalogue with programme schedules. Its cognitive layer turns listening into learning: vocabulary, sessions and goals sit next to the stations. The name comes from skywave propagation, the ionospheric bounce that lets a signal from Tokyo reach Lisbon. macOS and Android are live. iOS is in review.",
+      "A world radio player with a map, favourites that survive catalogue changes, and a curated station catalogue with programme schedules. Its cognitive layer turns listening into learning: vocabulary, sessions and goals sit next to the stations. The name comes from skywave propagation, the ionospheric bounce that lets a signal from Tokyo reach Tallinn. macOS and Android are live. iOS is in review.",
     links: [
       {
         label: "Google Play",

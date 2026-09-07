@@ -41,9 +41,9 @@ export function getContent(lang: Lang) {
 export const ui = {
   en: {
     siteName: "Tuturama",
-    tagline: "An AI-native software factory for systems that cannot break. Tallinn and Lisbon.",
+    tagline: "An AI-native software factory for systems that cannot break.",
     description:
-      "An AI-native software factory for systems that cannot break. Products, embedded security and AI work, and open source merged upstream. Tallinn and Lisbon.",
+      "An AI-native software factory for systems that cannot break. Products, embedded security and AI work, and open source merged upstream.",
     nav: { products: "products", upstream: "upstream", agents: "agents", how: "how we work", about: "about", contact: "contact", archive: "archive", github: "github", writing: "writing" },
     switchTo: "Eesti keeles",
     footer: { reg: "Reg.", estonian: "An Estonian company. European innovation." },
@@ -122,7 +122,7 @@ export const ui = {
     },
     about: {
       title: "About",
-      description: "Tuturama OÜ, founded 2020 in Tallinn, run from Lisbon by Gabriel Rondon.",
+      description: "Tuturama OÜ, founded 2020 in Tallinn by Gabriel Rondon.",
       annotation: "about",
       h1: "Frontier technology, inside institutions that cannot afford to break.",
       paras: [
@@ -134,8 +134,6 @@ export const ui = {
       ],
       company: "Company",
       registry: "Registry code",
-      operating: "Operating from",
-      lisbon: "Lisbon, Portugal",
       elsewhere: "Elsewhere",
       contact: "contact",
     },
@@ -165,9 +163,9 @@ export const ui = {
   },
   et: {
     siteName: "Tuturama",
-    tagline: "AI-natiivne tarkvaratehas süsteemidele, mis ei tohi katki minna. Tallinn ja Lissabon.",
+    tagline: "AI-natiivne tarkvaratehas süsteemidele, mis ei tohi katki minna.",
     description:
-      "AI-natiivne tarkvaratehas süsteemidele, mis ei tohi katki minna. Tooted, sisseehitatud turva- ja AI-töö ning avatud lähtekood, mis on upstream'is vastu võetud. Tallinn ja Lissabon.",
+      "AI-natiivne tarkvaratehas süsteemidele, mis ei tohi katki minna. Tooted, sisseehitatud turva- ja AI-töö ning avatud lähtekood, mis on upstream'is vastu võetud.",
     nav: { products: "tooted", upstream: "upstream", agents: "agendid", how: "kuidas me töötame", about: "meist", contact: "kontakt", archive: "arhiiv", github: "github", writing: "kirjutised" },
     switchTo: "In English",
     footer: { reg: "Reg.", estonian: "Eesti ettevõte. Euroopa innovatsioon." },
@@ -246,7 +244,7 @@ export const ui = {
     },
     about: {
       title: "Meist",
-      description: "Tuturama OÜ, asutatud 2020 Tallinnas, juhitud Lissabonist Gabriel Rondoni poolt.",
+      description: "Tuturama OÜ, asutatud 2020 Tallinnas Gabriel Rondoni poolt.",
       annotation: "meist",
       h1: "Tipptehnoloogia institutsioonidesse, mis ei tohi katki minna.",
       paras: [
@@ -258,8 +256,6 @@ export const ui = {
       ],
       company: "Ettevõte",
       registry: "Registrikood",
-      operating: "Tegutseb",
-      lisbon: "Lissabon, Portugal",
       elsewhere: "Mujal",
       contact: "kontakt",
     },

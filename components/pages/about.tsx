@@ -25,8 +25,6 @@ export function AboutPage({ lang }: { lang: Lang }) {
               {t.registry} {company.reg}
             </p>
             <p>{company.address}</p>
-            <p className="mt-6 text-[14px] uppercase tracking-wide">{t.operating}</p>
-            <p className="mt-2 text-cream">{t.lisbon}</p>
             <p className="mt-6 text-[14px] uppercase tracking-wide">{t.elsewhere}</p>
             <p className="mt-2 flex flex-col gap-1">
               <a href="https://github.com/tuturama" className="text-cream">

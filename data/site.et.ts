@@ -32,7 +32,7 @@ export const products: {
     status: "live",
     one: "Raadio kogu planeedilt, sinu menüüribal ja taskus.",
     body:
-      "Maailmaraadio kaardi, kataloogimuutusi üleelavate lemmikute ja saatekavadega jaamakataloogiga. Selle kognitiivne kiht muudab kuulamise õppimiseks: sõnavara, sessioonid ja eesmärgid on jaamade kõrval. Nimi tuleb ionosfäärilevist (skywave propagation), mille tõttu jõuab Tokyo signaal Lissaboni. macOS ja Android on väljas. iOS on ülevaatusel.",
+      "Maailmaraadio kaardi, kataloogimuutusi üleelavate lemmikute ja saatekavadega jaamakataloogiga. Selle kognitiivne kiht muudab kuulamise õppimiseks: sõnavara, sessioonid ja eesmärgid on jaamade kõrval. Nimi tuleb ionosfäärilevist (skywave propagation), mille tõttu jõuab Tokyo signaal Tallinna. macOS ja Android on väljas. iOS on ülevaatusel.",
     links: [
       { label: "Google Play", href: "https://play.google.com/store/apps/details?id=app.skywave.android" },
     ],
