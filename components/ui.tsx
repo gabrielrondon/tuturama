@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { company, hueClass, type Hue } from "@/data/site";
+import { hueClass, type Hue, company } from "@/data/site";
+import { href, other, ui, type Lang } from "@/lib/i18n";
+import { FlagEE, FlagGB } from "@/components/flags";
 
 export function Annotation({ label, hue }: { label: string; hue: Hue }) {
   return (
@@ -43,40 +45,75 @@ export function Section({
   );
 }
 
-const nav = [
-  { href: "/products", label: "products" },
-  { href: "/upstream", label: "upstream" },
-  { href: "/agents", label: "agents" },
-  { href: "/how-we-work", label: "how we work" },
-  { href: "/about", label: "about" },
-];
+function navItems(lang: Lang) {
+  const n = ui[lang].nav;
+  return [
+    { href: href(lang, "/products"), label: n.products },
+    { href: href(lang, "/upstream"), label: n.upstream },
+    { href: href(lang, "/agents"), label: n.agents },
+    { href: href(lang, "/how-we-work"), label: n.how },
+    { href: href(lang, "/about"), label: n.about },
+  ];
+}
 
-export function Nav() {
+/* Language switch: shows the flag of the language you would switch to. */
+export function LangSwitch({ lang, path }: { lang: Lang; path: string }) {
+  const target = other(lang);
+  const Flag = target === "et" ? FlagEE : FlagGB;
+  return (
+    <Link
+      href={href(target, path)}
+      hrefLang={target}
+      title={ui[lang].switchTo}
+      aria-label={ui[lang].switchTo}
+      className="inline-flex items-center gap-2 rounded-full border border-hairline px-2 py-1 no-underline transition-colors hover:border-cream"
+    >
+      <Flag className="h-[22px] w-[30px]" />
+      <span className="text-[14px] font-semibold uppercase tracking-wide text-cream-dim">{target}</span>
+    </Link>
+  );
+}
+
+export function Wordmark({ lang }: { lang: Lang }) {
+  return (
+    <Link href={href(lang, "/")} className="display text-[22px] no-underline" aria-label="Tuturama">
+      <span className="text-green">{"{ "}</span>
+      tuturama
+      <span className="text-green">{" }"}</span>
+    </Link>
+  );
+}
+
+export function Nav({ lang, path }: { lang: Lang; path: string }) {
+  const items = navItems(lang);
+  const n = ui[lang].nav;
   return (
     <header className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-6 md:px-10">
-      <Link href="/" className="display text-[22px] no-underline" aria-label="Tuturama home">
-        <span className="text-green">{"{ "}</span>
-        tuturama
-        <span className="text-green">{" }"}</span>
-      </Link>
+      <Wordmark lang={lang} />
       <nav className="hidden items-center gap-7 md:flex">
-        {nav.map((n) => (
-          <Link key={n.href} href={n.href} className="text-cream-dim no-underline hover:text-cream">
-            {n.label}
+        {items.map((i) => (
+          <Link key={i.href} href={i.href} className="text-cream-dim no-underline hover:text-cream">
+            {i.label}
           </Link>
         ))}
-        <Link href="/contact" className="pill">
-          contact
+        <Link href={href(lang, "/contact")} className="pill">
+          {n.contact}
         </Link>
+        <LangSwitch lang={lang} path={path} />
       </nav>
-      <Link href="/contact" className="pill md:hidden">
-        contact
-      </Link>
+      <div className="flex items-center gap-3 md:hidden">
+        <Link href={href(lang, "/contact")} className="pill">
+          {n.contact}
+        </Link>
+        <LangSwitch lang={lang} path={path} />
+      </div>
     </header>
   );
 }
 
-export function Footer() {
+export function Footer({ lang }: { lang: Lang }) {
+  const items = navItems(lang);
+  const t = ui[lang];
   return (
     <footer className="hairline mt-10">
       <div className="mx-auto grid max-w-[1400px] gap-8 px-5 py-10 md:grid-cols-3 md:px-10">
@@ -86,34 +123,32 @@ export function Footer() {
             tuturama
             <span className="text-green">{" }"}</span>
           </div>
-          <p className="mt-3 max-w-[32ch] text-cream-dim">
-            An AI-native software factory for systems that cannot break. Tallinn and Lisbon.
-          </p>
+          <p className="mt-3 max-w-[32ch] text-cream-dim">{t.tagline}</p>
         </div>
         <nav className="flex flex-col gap-2 md:hidden">
-          {nav.map((n) => (
-            <Link key={n.href} href={n.href} className="text-cream-dim no-underline hover:text-cream">
-              {n.label}
+          {items.map((i) => (
+            <Link key={i.href} href={i.href} className="text-cream-dim no-underline hover:text-cream">
+              {i.label}
             </Link>
           ))}
-          <Link href="/archive" className="text-cream-dim no-underline hover:text-cream">
-            archive
+          <Link href={href(lang, "/archive")} className="text-cream-dim no-underline hover:text-cream">
+            {t.nav.archive}
           </Link>
         </nav>
         <div className="hidden flex-col gap-2 md:flex">
-          <Link href="/archive" className="text-cream-dim no-underline hover:text-cream">
-            archive
+          <Link href={href(lang, "/archive")} className="text-cream-dim no-underline hover:text-cream">
+            {t.nav.archive}
           </Link>
           <a href="https://github.com/gabrielrondon" className="text-cream-dim no-underline hover:text-cream">
-            github
+            {t.nav.github}
           </a>
           <a href="https://gabrielrondon.com" className="text-cream-dim no-underline hover:text-cream">
-            writing
+            {t.nav.writing}
           </a>
         </div>
         <div className="text-[15px] text-cream-dim">
           <p>
-            {company.name} · Reg. {company.reg}
+            {company.name} · {t.footer.reg} {company.reg}
           </p>
           <p>{company.address}</p>
           <p>
