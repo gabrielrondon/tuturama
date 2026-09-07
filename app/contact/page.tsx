@@ -13,8 +13,8 @@ const asks = [
     body: "Security and AI advisory inside your team, with the engineering that follows. Months, not days.",
   },
   {
-    title: "A fixed-scope build",
-    body: "A product, a tool, an integration, delivered by the factory with the gates described in how we work.",
+    title: "An operating model for your team",
+    body: "We install the model we run on inside one team or function: roles as skills, gates before shipping, memory that outlives the session. Two to four weeks. Your people keep it.",
   },
   {
     title: "An agent to break",

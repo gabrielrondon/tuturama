@@ -20,7 +20,9 @@ export default function AboutPage() {
             Tuturama was founded in Tallinn in {company.founded} by Gabriel Berlitz Rondon. It began
             as an education studio for audiences the technology industry overlooked, and became
             what it is now: an AI-native software factory that builds products, embeds with
-            security teams, and contributes upstream.
+            security teams, and contributes upstream. Tuturama is the company behind Skywave,
+            Listening Robots and Ulpiano, and the vehicle for the founder&apos;s embedded and
+            open source work.
           </p>
           <p>
             Gabriel has spent twenty years where new technology meets old structure. He was a

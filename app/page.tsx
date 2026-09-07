@@ -51,6 +51,11 @@ export default function Home() {
             security and artificial intelligence. The advice comes with the engineering that
             follows it: threat models for AI adoption, architecture reviews, tooling the team
             keeps after we leave.
+            <span className="mt-4 block">
+              We also install the operating model we run on inside a team: roles as skills, gates
+              before shipping, memory that outlives the session. Two to four weeks. Your people
+              keep it.
+            </span>
           </p>
           <div className="max-w-[46ch] text-cream-dim">
             <p>
