@@ -96,6 +96,10 @@ export function HomePage({ lang }: { lang: Lang }) {
         </ul>
         <p className="mt-10 text-cream-dim">
           {t.upstreamNote}{" "}
+          <a href="https://github.com/gabrielrondon" className="text-cream">
+            github.com/gabrielrondon
+          </a>
+          {" · "}
           <Link href={href(lang, "/upstream")} className="text-cream">
             {t.upstreamMore}
           </Link>

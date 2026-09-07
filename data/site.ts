@@ -38,7 +38,7 @@ export const products: {
     status: "live",
     one: "Radio from the whole planet, in your menu bar and in your pocket.",
     body:
-      "A world radio player with a map, favourites that survive catalogue changes, and a curated station catalogue with programme schedules. The name comes from skywave propagation, the ionospheric bounce that lets a signal from Tokyo reach Lisbon. macOS and Android are live. iOS is in review.",
+      "A world radio player with a map, favourites that survive catalogue changes, and a curated station catalogue with programme schedules. Its cognitive layer turns listening into learning: vocabulary, sessions and goals sit next to the stations. The name comes from skywave propagation, the ionospheric bounce that lets a signal from Tokyo reach Lisbon. macOS and Android are live. iOS is in review.",
     links: [
       {
         label: "Google Play",
@@ -51,7 +51,7 @@ export const products: {
     status: "pilot",
     one: "Audio intelligence for radio.",
     body:
-      "Continuous listening to the broadcast, turned into quota compliance reports, proof of airplay and market intelligence. Built for regulators, rights societies and stations, starting with regional languages that mainstream speech recognition ignores. Piloting in Europe.",
+      "Continuous listening to the broadcast, turned into quota compliance reports, proof of airplay and market intelligence. The cognitive layer is the listening itself: recognising speech, music and language on the live signal, hour after hour. Built for regulators, rights societies and stations, starting with regional languages that mainstream speech recognition ignores. Piloting in Europe.",
     url: "https://listeningrobots.com",
     links: [{ label: "listeningrobots.com", href: "https://listeningrobots.com" }],
   },
@@ -60,7 +60,7 @@ export const products: {
     status: "private pilot",
     one: "A legal companion that lives inside your coding agent.",
     body:
-      "While the project is being born, Ulpiano reads the repository and flags trademark, privacy, licence and tax issues, records each risk next to the code, and calls a real lawyer when it is time. It suggests. It never issues a legal opinion.",
+      "While the project is being born, Ulpiano reads the repository and flags trademark, privacy, licence and tax issues, records each risk next to the code, and calls a real lawyer when it is time. Reading code the way a lawyer reads a file is its cognitive layer. It suggests. It never issues a legal opinion.",
     url: "https://ulpiano.tuturama.com",
     links: [{ label: "ulpiano.tuturama.com", href: "https://ulpiano.tuturama.com" }],
   },
@@ -74,7 +74,7 @@ export const merged: {
 }[] = [
   {
     project: "Linux kernel",
-    what: "12 commits in mainline (staging, IIO drivers), reviewed by maintainers at Intel and Huawei. Two more queued in the IIO tree.",
+    what: "Multiple commits in mainline (staging, IIO drivers), reviewed by maintainers at Intel and Huawei. More in the IIO queue.",
     proof: "git.kernel.org author search",
     href: "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Gabriel+Rondon",
   },
@@ -86,7 +86,7 @@ export const merged: {
   },
   {
     project: "FediMint",
-    what: "Three merged PRs: automated nix flake updates, deprecation warnings on hidden CLI commands, unwrap to expect in non-test code.",
+    what: "Merged PRs: automated nix flake updates, deprecation warnings on hidden CLI commands, unwrap to expect in non-test code.",
     proof: "fedimint/fedimint #8409, #8416, #8420",
     href: "https://github.com/fedimint/fedimint/pulls?q=is%3Apr+author%3Agabrielrondon+is%3Amerged",
   },

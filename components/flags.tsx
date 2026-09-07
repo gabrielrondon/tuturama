@@ -49,3 +49,19 @@ export function FlagGB({ className, title = "English" }: Props) {
     </Tile>
   );
 }
+
+/* European Union: twelve stars on blue. */
+export function FlagEU({ className, title = "European Union" }: Props) {
+  const stars = Array.from({ length: 12 }, (_, i) => {
+    const a = (i / 12) * Math.PI * 2 - Math.PI / 2;
+    return { x: 18 + Math.cos(a) * 7.2, y: 13 + Math.sin(a) * 7.2 };
+  });
+  return (
+    <Tile title={title} className={className}>
+      <rect x="0" y="0" width="36" height="26" fill="#003399" />
+      {stars.map((s, i) => (
+        <circle key={i} cx={s.x} cy={s.y} r="1.05" fill="#ffcc00" />
+      ))}
+    </Tile>
+  );
+}

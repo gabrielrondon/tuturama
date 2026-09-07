@@ -50,7 +50,12 @@ export function UpstreamPage({ lang }: { lang: Lang }) {
           ))}
         </ul>
 
-        <p className="hairline mt-16 pt-8 text-cream-dim">{t.note}</p>
+        <p className="hairline mt-16 pt-8 text-cream-dim">
+          {t.note}{" "}
+          <a href="https://github.com/gabrielrondon" className="text-cream">
+            github.com/gabrielrondon
+          </a>
+        </p>
       </div>
     </>
   );

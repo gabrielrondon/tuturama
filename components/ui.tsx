@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { hueClass, type Hue, company } from "@/data/site";
 import { href, other, ui, type Lang } from "@/lib/i18n";
-import { FlagEE, FlagGB } from "@/components/flags";
+import { FlagEE, FlagEU, FlagGB } from "@/components/flags";
 
 export function Annotation({ label, hue }: { label: string; hue: Hue }) {
   return (
@@ -147,6 +147,11 @@ export function Footer({ lang }: { lang: Lang }) {
           </a>
         </div>
         <div className="text-[15px] text-cream-dim">
+          <p className="mb-3 flex items-center gap-2">
+            <FlagEE className="h-[18px] w-[25px]" />
+            <FlagEU className="h-[18px] w-[25px]" />
+            <span>{t.footer.estonian}</span>
+          </p>
           <p>
             {company.name} · {t.footer.reg} {company.reg}
           </p>

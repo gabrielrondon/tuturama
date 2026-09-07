@@ -32,7 +32,7 @@ export const products: {
     status: "live",
     one: "Raadio kogu planeedilt, sinu menüüribal ja taskus.",
     body:
-      "Maailmaraadio kaardi, kataloogimuutusi üleelavate lemmikute ja saatekavadega jaamakataloogiga. Nimi tuleb ionosfäärilevist (skywave propagation), mille tõttu jõuab Tokyo signaal Lissaboni. macOS ja Android on väljas. iOS on ülevaatusel.",
+      "Maailmaraadio kaardi, kataloogimuutusi üleelavate lemmikute ja saatekavadega jaamakataloogiga. Selle kognitiivne kiht muudab kuulamise õppimiseks: sõnavara, sessioonid ja eesmärgid on jaamade kõrval. Nimi tuleb ionosfäärilevist (skywave propagation), mille tõttu jõuab Tokyo signaal Lissaboni. macOS ja Android on väljas. iOS on ülevaatusel.",
     links: [
       { label: "Google Play", href: "https://play.google.com/store/apps/details?id=app.skywave.android" },
     ],
@@ -42,7 +42,7 @@ export const products: {
     status: "pilot",
     one: "Audioluure raadiole.",
     body:
-      "Pidev eetri kuulamine, millest saavad kvoodiaruanded, eetrisoleku tõendid ja turuluure. Loodud regulaatoritele, autoriõiguste organisatsioonidele ja jaamadele, alustades piirkondlikest keeltest, mida peavoolu kõnetuvastus eirab. Pilootprojektid Euroopas.",
+      "Pidev eetri kuulamine, millest saavad kvoodiaruanded, eetrisoleku tõendid ja turuluure. Kognitiivne kiht on kuulamine ise: kõne, muusika ja keele äratundmine otsesignaalist, tund tunni järel. Loodud regulaatoritele, autoriõiguste organisatsioonidele ja jaamadele, alustades piirkondlikest keeltest, mida peavoolu kõnetuvastus eirab. Pilootprojektid Euroopas.",
     url: "https://listeningrobots.com",
     links: [{ label: "listeningrobots.com", href: "https://listeningrobots.com" }],
   },
@@ -51,7 +51,7 @@ export const products: {
     status: "private pilot",
     one: "Õigusabiline, kes elab sinu kodeerimisagendis.",
     body:
-      "Kui projekt sünnib, loeb Ulpiano repositooriumi ning märgib kaubamärgi-, privaatsus-, litsentsi- ja maksuküsimused, kirjutab iga riski koodi kõrvale ja kutsub päris juristi, kui on aeg. Ta soovitab. Ta ei anna kunagi õiguslikku arvamust.",
+      "Kui projekt sünnib, loeb Ulpiano repositooriumi ning märgib kaubamärgi-, privaatsus-, litsentsi- ja maksuküsimused, kirjutab iga riski koodi kõrvale ja kutsub päris juristi, kui on aeg. Koodi lugemine nii, nagu jurist loeb toimikut, ongi tema kognitiivne kiht. Ta soovitab. Ta ei anna kunagi õiguslikku arvamust.",
     url: "https://ulpiano.tuturama.com",
     links: [{ label: "ulpiano.tuturama.com", href: "https://ulpiano.tuturama.com" }],
   },
@@ -60,7 +60,7 @@ export const products: {
 export const merged: { project: string; what: string; proof: string; href: string }[] = [
   {
     project: "Linuxi tuum",
-    what: "12 commit'i mainline'is (staging, IIO draiverid), üle vaadanud Inteli ja Huawei hooldajad. Kaks veel IIO puus järjekorras.",
+    what: "Mitu commit'i mainline'is (staging, IIO draiverid), üle vaadanud Inteli ja Huawei hooldajad. Veel on IIO puus järjekorras.",
     proof: "git.kernel.org autoriotsing",
     href: "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Gabriel+Rondon",
   },
@@ -72,7 +72,7 @@ export const merged: { project: string; what: string; proof: string; href: strin
   },
   {
     project: "FediMint",
-    what: "Kolm vastuvõetud PR-i: automaatsed nix flake uuendused, hoiatused peidetud CLI käskudel, unwrap asendatud expect'iga.",
+    what: "Vastuvõetud PR-id: automaatsed nix flake uuendused, hoiatused peidetud CLI käskudel, unwrap asendatud expect'iga.",
     proof: "fedimint/fedimint #8409, #8416, #8420",
     href: "https://github.com/fedimint/fedimint/pulls?q=is%3Apr+author%3Agabrielrondon+is%3Amerged",
   },
