@@ -54,10 +54,10 @@ export function Threads({ lang }: { lang: Lang }) {
             </div>
 
             {/* Mobile: the list */}
-            <ol className="mt-5 border-l border-current pl-5 md:hidden">
+            <ol className="ml-3 mt-5 border-l border-current pl-5 md:hidden">
               {t.items.map((m, i) => (
                 <li key={m.label} className="dot-text relative py-3" style={{ "--i": i } as React.CSSProperties}>
-                  <span className="absolute -left-[26px] top-[18px] block h-[9px] w-[9px] rounded-full bg-current" />
+                  <span className="absolute -left-[25px] top-[18px] block h-[9px] w-[9px] rounded-full bg-current" />
                   <p className="text-[13px] uppercase tracking-wide">{m.when}</p>
                   <p className="font-semibold text-cream">
                     {m.href ? (
