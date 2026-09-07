@@ -35,6 +35,9 @@ export function AboutPage({ lang }: { lang: Lang }) {
               <a href="https://gabrielrondon.com" className="text-cream">
                 gabrielrondon.com
               </a>
+              <a href="https://www.linkedin.com/company/tuturama" className="text-cream">
+                linkedin.com/company/tuturama
+              </a>
             </p>
             <p className="mt-8">
               <Link href={href(lang, "/contact")} className="pill">

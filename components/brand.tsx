@@ -78,11 +78,12 @@ export function LinkedInBanner({ scale = 2 }: { scale?: number }) {
         className="flourish flourish-crush"
         style={{ right: s(220), top: s(80), width: s(260), height: s(260), filter: `blur(${s(60)})`, opacity: 0.28 }}
       />
-      <div className="relative" style={{ padding: `${s(34)} ${s(48)}` }}>
-        <div className="annotation" style={{ fontSize: s(15), color: "#abff84", fontWeight: 400 }}>
+      {/* Text lives in the top half only: LinkedIn overlays the company logo on the bottom-left quadrant. */}
+      <div className="relative" style={{ padding: `${s(24)} ${s(48)} 0` }}>
+        <div className="annotation" style={{ fontSize: s(14), color: "#abff84", fontWeight: 400 }}>
           {"{ software factory }"}
         </div>
-        <div style={{ fontSize: s(44), lineHeight: 0.95, letterSpacing: "-0.02em", marginTop: s(10), maxWidth: s(760) }}>
+        <div style={{ fontSize: s(38), lineHeight: 1, letterSpacing: "-0.02em", marginTop: s(8), whiteSpace: "nowrap" }}>
           Software factory for systems that cannot break.
         </div>
       </div>

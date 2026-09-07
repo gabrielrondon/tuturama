@@ -145,6 +145,9 @@ export function Footer({ lang }: { lang: Lang }) {
           <a href="https://gabrielrondon.com" className="text-cream-dim no-underline hover:text-cream">
             {t.nav.writing}
           </a>
+          <a href="https://www.linkedin.com/company/tuturama" className="text-cream-dim no-underline hover:text-cream">
+            linkedin
+          </a>
         </div>
         <div className="text-[15px] text-cream-dim">
           <p className="mb-3 flex items-center gap-2">
