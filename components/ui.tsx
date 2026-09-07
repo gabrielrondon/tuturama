@@ -155,11 +155,13 @@ export function Footer({ lang }: { lang: Lang }) {
           </a>
         </div>
         <div className="text-[15px] text-cream-dim">
-          <p className="mb-3 flex items-center gap-2">
-            <FlagEE className="h-[18px] w-[25px]" />
-            <FlagEU className="h-[18px] w-[25px]" />
-            <span>{t.footer.estonian}</span>
-          </p>
+          <div className="mb-3">
+            <p className="flex items-center gap-2">
+              <FlagEE className="h-[18px] w-[25px]" />
+              <FlagEU className="h-[18px] w-[25px]" />
+            </p>
+            <p className="mt-2">{t.footer.estonian}</p>
+          </div>
           <p>
             {company.name} · {t.footer.reg} {company.reg}
           </p>
