@@ -39,7 +39,7 @@ export default function ArchivePage() {
         <div className="frame rounded-2xl">
           <Image
             src="/archive/icarus-site.png"
-            alt="The Icarus and Internet Computer series page, 2024"
+            alt="Icarus: Quest for the Infinite Web, the podcast page on Spotify, 2024"
             width={1400}
             height={960}
             sizes="(min-width: 768px) 50vw, 100vw"

@@ -182,7 +182,7 @@ export const archive: {
     period: "2024",
     title: "Icarus and the Internet Computer",
     body:
-      "An audio series, Quest for the Infinite Web, that explains the architecture and fundamentals of the Internet Computer through a story. Written and produced by Tuturama Studios, with multilingual editions planned.",
+      "An audio series, Quest for the Infinite Web, that explains the architecture and fundamentals of the Internet Computer through a story. Written and produced by Tuturama Studios and released as a podcast on Spotify, with multilingual editions planned.",
   },
   {
     period: "2023",
