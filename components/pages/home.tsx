@@ -16,12 +16,13 @@ export function HomePage({ lang }: { lang: Lang }) {
       <section className="relative overflow-hidden px-5 pb-16 pt-10 md:px-10 md:pb-24 md:pt-20">
         <div className="flourish flourish-emerald right-[-10%] top-[-10%] h-[520px] w-[520px] md:right-[4%] md:top-[-6%] md:h-[720px] md:w-[720px]" />
         <div className="flourish flourish-crush right-[10%] top-[40%] h-[320px] w-[320px] opacity-30 md:right-[18%] md:top-[46%] md:h-[420px] md:w-[420px]" />
+        {/* The hero bleeds to the viewport edge, all of it: annotation, headline, lead and buttons share one left edge. Sections below sit in the centred container. */}
         <div className="relative hero-in">
-          <div className="mx-auto max-w-[1400px]">
+          <div>
             <Annotation label={t.annotation} hue="green" />
           </div>
           <h1 className="display hero-title mt-6 max-w-[12.5ch] pr-0">{t.hero}</h1>
-          <div className="mx-auto mt-10 grid max-w-[1400px] gap-8 md:grid-cols-2 md:gap-16">
+          <div className="mt-10 grid gap-8 md:grid-cols-2 md:gap-16">
             <p className="max-w-[46ch] text-[19px] leading-[1.2] text-cream">{t.lead}</p>
             <div className="flex flex-wrap items-start gap-3 md:justify-end">
               <Link href={href(lang, "/contact")} className="pill pill-primary">

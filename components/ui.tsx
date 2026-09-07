@@ -93,7 +93,7 @@ export function Nav({ lang, path }: { lang: Lang; path: string }) {
   const items = navItems(lang);
   const n = ui[lang].nav;
   return (
-    <header className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-6 md:px-10">
+    <header className="flex items-center justify-between px-5 py-6 md:px-10">
       <Wordmark lang={lang} />
       <nav className="hidden items-center gap-7 md:flex">
         {items.map((i) => (
