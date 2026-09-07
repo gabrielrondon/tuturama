@@ -22,9 +22,9 @@ export function HomePage({ lang }: { lang: Lang }) {
             <Annotation label={t.annotation} hue="green" />
           </div>
           <h1 className="display hero-title mt-6 max-w-[12.5ch] pr-0">{t.hero}</h1>
-          <div className="mt-10 grid gap-8 md:grid-cols-2 md:gap-16">
+          <div className="mt-10 flex flex-col gap-6 md:flex-row md:items-end md:gap-12">
             <p className="max-w-[46ch] text-[19px] leading-[1.2] text-cream">{t.lead}</p>
-            <div className="flex flex-wrap items-start gap-3 md:justify-end">
+            <div className="flex flex-wrap items-start gap-3">
               <Link href={href(lang, "/contact")} className="pill pill-primary">
                 {t.ctaWork}
               </Link>

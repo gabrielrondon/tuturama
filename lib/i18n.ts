@@ -50,7 +50,7 @@ export const ui = {
     home: {
       annotation: "software factory",
       hero: "Software factory for systems that cannot break.",
-      lead: "Tuturama is an AI-native software factory. We build products, embed with security teams inside large institutions, and contribute to the code the world runs on. Tallinn and Lisbon.",
+      lead: "Tuturama is an AI-native software factory. We build products, embed with security teams inside large institutions, and contribute to the code the world runs on.",
       ctaWork: "work with us",
       ctaShipped: "see what shipped",
       embeddedTitle: "Security and AI, inside the institution.",
@@ -174,7 +174,7 @@ export const ui = {
     home: {
       annotation: "tarkvaratehas",
       hero: "Tarkvaratehas süsteemidele, mis ei tohi katki minna.",
-      lead: "Tuturama on AI-natiivne tarkvaratehas. Me ehitame tooteid, töötame suurte organisatsioonide turvameeskondade sees ja panustame koodi, millel maailm töötab. Tallinn ja Lissabon.",
+      lead: "Tuturama on AI-natiivne tarkvaratehas. Me ehitame tooteid, töötame suurte organisatsioonide turvameeskondade sees ja panustame koodi, millel maailm töötab.",
       ctaWork: "tee meiega koostööd",
       ctaShipped: "vaata, mis on valmis",
       embeddedTitle: "Turvalisus ja AI, organisatsiooni sees.",
