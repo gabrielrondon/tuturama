@@ -46,7 +46,7 @@ export const ui = {
       "An AI-native software factory for systems that cannot break. Products, embedded security and AI work, and open source merged upstream. Tallinn and Lisbon.",
     nav: { products: "products", upstream: "upstream", agents: "agents", how: "how we work", about: "about", contact: "contact", archive: "archive", github: "github", writing: "writing" },
     switchTo: "Eesti keeles",
-    footer: { reg: "Reg.", estonian: "Registered in Estonia. Based in Lisbon." },
+    footer: { reg: "Reg.", estonian: "Registered in Estonia. Operating across Europe." },
     home: {
       annotation: "software factory",
       hero: "Software factory for systems that cannot break.",
@@ -170,7 +170,7 @@ export const ui = {
       "AI-natiivne tarkvaratehas süsteemidele, mis ei tohi katki minna. Tooted, sisseehitatud turva- ja AI-töö ning avatud lähtekood, mis on upstream'is vastu võetud. Tallinn ja Lissabon.",
     nav: { products: "tooted", upstream: "upstream", agents: "agendid", how: "kuidas me töötame", about: "meist", contact: "kontakt", archive: "arhiiv", github: "github", writing: "kirjutised" },
     switchTo: "In English",
-    footer: { reg: "Reg.", estonian: "Registreeritud Eestis. Tegutseb Lissabonist." },
+    footer: { reg: "Reg.", estonian: "Registreeritud Eestis. Tegutseb üle Euroopa." },
     home: {
       annotation: "tarkvaratehas",
       hero: "Tarkvaratehas süsteemidele, mis ei tohi katki minna.",
