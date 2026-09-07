@@ -145,8 +145,9 @@ export const agentsWork: { title: string; body: string; status: string; href?: s
   {
     title: "agent-security oskustepakett",
     body:
-      "Ülaltoodud meetodid pakendatuna oskusteks kodeerimisagentidele: ohumudel agentide kulutustele, SSRF-värava audit, MCP nähtavuse audit, allkirjastatud auditilogi. MIT.",
-    status: "Tulekul",
+      "Ülaltoodud meetodid pakendatuna oskusteks kodeerimisagentidele: SSRF-värava audit 40 testvektoriga, ohumudel agentide kulutustele, MCP nähtavuse audit ning allkirjastatud auditilogi käivitatava lisaja ja kontrollijaga. MIT, paigaldus ühe reaga.",
+    status: "Avatud lähtekood, v0.1.0",
+    href: "https://github.com/tuturama/agent-security",
   },
 ];
 

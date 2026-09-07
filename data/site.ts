@@ -168,8 +168,9 @@ export const agentsWork: {
   {
     title: "agent-security skill pack",
     body:
-      "The methods above, packaged as skills for coding agents: threat model for agent spend, SSRF gate audit, MCP visibility audit, signed audit log. MIT.",
-    status: "Coming",
+      "The methods above, packaged as skills for coding agents: SSRF gate audit with 40 test vectors, threat model for agentic spend, MCP visibility audit, and a signed audit log with a runnable appender and verifier. MIT, install in one line.",
+    status: "Open source, v0.1.0",
+    href: "https://github.com/tuturama/agent-security",
   },
 ];
 
