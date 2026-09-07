@@ -14,6 +14,7 @@ export const lines = {
   upstream: { label: "upstream", hue: "blue" as Hue },
   writing: { label: "writing", hue: "lilac" as Hue },
   now: { label: "now", hue: "green" as Hue },
+  threads: { label: "threads", hue: "lilac" as Hue },
 };
 
 export const hueClass: Record<Hue, string> = {

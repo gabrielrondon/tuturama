@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Annotation, Nav, Section } from "@/components/ui";
 import { EmbeddedArt, ProductsArt, UpstreamArt, AgentsArt } from "@/components/illustrations";
 import { ProductVisual } from "@/components/product-visual";
+import { Threads } from "@/components/threads";
 import { statusLabel } from "@/data/site.et";
 import { getContent, href, ui, type Lang } from "@/lib/i18n";
 
@@ -82,6 +83,11 @@ export function HomePage({ lang }: { lang: Lang }) {
             {t.productsMore}
           </Link>
         </p>
+      </Section>
+
+      <Section label={lines.threads.label} hue={lines.threads.hue} id="threads" title={t.threadsTitle}>
+        <p className="mb-10 max-w-[56ch] text-cream-dim">{t.threadsNote}</p>
+        <Threads lang={lang} />
       </Section>
 
       <Section label={lines.upstream.label} hue={lines.upstream.hue} id="upstream" title={t.upstreamTitle} art={<UpstreamArt className={artClass} />}>

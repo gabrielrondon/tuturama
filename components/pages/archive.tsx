@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Annotation, Nav } from "@/components/ui";
+import { Threads } from "@/components/threads";
 import { getContent, ui, type Lang } from "@/lib/i18n";
 
 /* Artwork produced by Tuturama Studios for its own series, 2023 and 2024. Keyed by position. */
@@ -22,6 +23,10 @@ export function ArchivePage({ lang }: { lang: Lang }) {
           <div className="frame rounded-2xl">
             <Image src="/archive/icarus-site.png" alt={t.altSpotify} width={1400} height={960} sizes="(min-width: 768px) 50vw, 100vw" className="block h-auto w-full" />
           </div>
+        </div>
+
+        <div className="hairline mt-14 pt-12">
+          <Threads lang={lang} />
         </div>
 
         <div className="mt-14">

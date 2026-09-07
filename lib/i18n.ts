@@ -69,6 +69,8 @@ export const ui = {
       nowAside: "Findings go to the maintainers first. Methods go public as skills.",
       nowCta: "what is open right now",
       writingBody: "Research and essays by the founder, on traceability, verification, and the engineering hidden inside institutions, at",
+      threadsTitle: "Three lines that run through the work.",
+      threadsNote: "Six years, three threads. Each one starts in the studio years and ends in something shipping now.",
     },
     products: {
       title: "Products",
@@ -191,6 +193,8 @@ export const ui = {
       nowAside: "Leiud lähevad kõigepealt hooldajatele. Meetodid avaldatakse oskustena.",
       nowCta: "mis on praegu lahti",
       writingBody: "Asutaja uurimused ja esseed jälgitavusest, kontrollitavusest ja institutsioonide sees peituvast inseneritööst aadressil",
+      threadsTitle: "Kolm joont, mis läbivad kogu tööd.",
+      threadsNote: "Kuus aastat, kolm joont. Igaüks algab stuudioaastatest ja lõpeb millegagi, mis on praegu väljas.",
     },
     products: {
       title: "Tooted",

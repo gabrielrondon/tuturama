@@ -242,3 +242,20 @@ a {
   .art .rider, .art .packet, .art .scan { opacity: 0; }
   .reveal, .reveal-wait { opacity: 1; transform: none; transition: none; }
 }
+
+/* Threads: the line draws, then the milestones pop in order. */
+@keyframes pop {
+  0% { opacity: 0; transform: scale(0.4); }
+  70% { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.thread .dot { transform-origin: center; transform-box: fill-box; }
+.thread .dot-text { transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal-wait.thread .dot { opacity: 0; }
+.reveal-wait.thread .dot-text { opacity: 0; transform: translateY(8px); }
+.is-in.thread .art .draw { animation-duration: 1.2s; }
+.is-in.thread .dot { animation: pop 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(400ms + var(--i, 0) * 220ms); }
+.is-in.thread .dot-text { opacity: 1; transform: none; transition-delay: calc(500ms + var(--i, 0) * 220ms); }
+@media (prefers-reduced-motion: reduce) {
+  .thread .dot, .thread .dot-text { animation: none !important; opacity: 1 !important; transform: none !important; transition: none !important; }
+}

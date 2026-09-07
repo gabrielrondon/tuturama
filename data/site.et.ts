@@ -10,6 +10,7 @@ export const lines = {
   upstream: { label: "upstream", hue: "blue" as Hue },
   writing: { label: "kirjutised", hue: "lilac" as Hue },
   now: { label: "praegu", hue: "green" as Hue },
+  threads: { label: "jooned", hue: "lilac" as Hue },
 };
 
 export const statusLabel: Record<ProductStatus, string> = {
