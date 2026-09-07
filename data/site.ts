@@ -202,7 +202,7 @@ export const archive: {
     period: "2021 to 2024",
     title: "Web3 education for overlooked audiences",
     body:
-      "Educational material on zero-knowledge proofs, tokenization and public blockchains, in languages the industry rarely translates to. Tuturama Labs shipped the demos and the tooling behind the courses.",
+      "Educational material on tokenization and public blockchains, in languages the industry rarely translates to. Tuturama Labs, the technical arm, built the demos and the tooling behind the courses.",
   },
   {
     period: "2017 to 2018, before Tuturama",

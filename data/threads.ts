@@ -28,8 +28,8 @@ const en: Thread[] = [
     hue: "blue",
     lead: "Prove it without revealing it.",
     items: [
-      { when: "2021", label: "ZK education", one: "Zero-knowledge proofs explained to audiences the industry overlooked, in several languages." },
-      { when: "2024", label: "DeFarm", one: "Verifiable origin and compliance records for Brazilian livestock, on Stellar. Co-founded.", href: "https://defarm.net" },
+      { when: "2024", label: "Tuturama Labs", one: "The studio's technical arm: tokenization and zero-knowledge development behind the courses." },
+      { when: "2025", label: "ZK demos", one: "Zero-knowledge proof demos and zkvox, a ZK voting prototype, public on GitHub.", href: "https://github.com/gabrielrondon/zkvox" },
       { when: "2025", label: "Ghost", one: "A zero-knowledge canister on the Internet Computer.", href: "https://github.com/gabrielrondon/ghost_dev" },
       { when: "2026", label: "proofpay", one: "Zero-knowledge gated x402 access for autonomous agents on Stellar.", href: "https://github.com/gabrielrondon/proofpay" },
     ],
@@ -67,8 +67,8 @@ const et: Thread[] = [
     hue: "blue",
     lead: "Tõesta seda ilma paljastamata.",
     items: [
-      { when: "2021", label: "ZK haridus", one: "Nullteadmusetõestused selgitatuna publikule, kellest tööstus mööda vaatas, mitmes keeles." },
-      { when: "2024", label: "DeFarm", one: "Brasiilia kariloomade kontrollitavad päritolu- ja vastavuskirjed Stellaris. Kaasasutatud.", href: "https://defarm.net" },
+      { when: "2024", label: "Tuturama Labs", one: "Stuudio tehniline haru: tokeniseerimise ja nullteadmuse arendus kursuste taga." },
+      { when: "2025", label: "ZK demod", one: "Nullteadmusetõestuste demod ja zkvox, ZK hääletamise prototüüp, avalikult GitHubis.", href: "https://github.com/gabrielrondon/zkvox" },
       { when: "2025", label: "Ghost", one: "Nullteadmuse canister Internet Computeris.", href: "https://github.com/gabrielrondon/ghost_dev" },
       { when: "2026", label: "proofpay", one: "Nullteadmusega väravaga x402 ligipääs autonoomsetele agentidele Stellaris.", href: "https://github.com/gabrielrondon/proofpay" },
     ],

@@ -175,7 +175,7 @@ export const archive: { period: string; title: string; body: string }[] = [
     period: "2021 kuni 2024",
     title: "Web3 haridus tähelepanuta publikule",
     body:
-      "Õppematerjalid nullteadmusetõestustest, tokeniseerimisest ja avalikest plokiahelatest keeltes, millesse tööstus harva tõlgib. Tuturama Labs tegi demod ja kursuste taga oleva tööriistastiku.",
+      "Õppematerjalid tokeniseerimisest ja avalikest plokiahelatest keeltes, millesse tööstus harva tõlgib. Tuturama Labs, tehniline haru, tegi demod ja kursuste taga oleva tööriistastiku.",
   },
   {
     period: "2017 kuni 2018, enne Tuturamat",
