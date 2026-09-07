@@ -91,7 +91,7 @@ export default function BrandPage() {
         <div className="mt-12 flex items-center gap-3 text-cream-dim">
           <FlagEE className="h-[22px] w-[30px]" />
           <FlagEU className="h-[22px] w-[30px]" />
-          <span>An Estonian company in the European Union.</span>
+          <span>Registered in Estonia. Based in Lisbon.</span>
         </div>
       </div>
     </>
