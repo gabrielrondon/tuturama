@@ -56,6 +56,7 @@ function navItems(lang: Lang) {
     { href: href(lang, "/products"), label: n.products },
     { href: href(lang, "/upstream"), label: n.upstream },
     { href: href(lang, "/agents"), label: n.agents },
+    { href: href(lang, "/audit"), label: n.audit },
     { href: href(lang, "/how-we-work"), label: n.how },
     { href: href(lang, "/about"), label: n.about },
   ];
